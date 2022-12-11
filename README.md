@@ -44,3 +44,13 @@ Time: {результат замера по времени для выполне
 ---
 ## 4 балла
 ![v6](https://github.com/kolpakovee/avs_idz4/blob/main/4.png)
+## 5 баллов
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/5.png)
+## 6 баллов
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/6.png)
+## 7 баллов
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/7.png)
+## 8 баллов
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/8.png)
+## 9 баллов
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/9.png)
