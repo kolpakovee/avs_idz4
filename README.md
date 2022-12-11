@@ -8,6 +8,7 @@
 ![v6](https://github.com/kolpakovee/avs_idz4/blob/main/task.png)
 
 Чтобы было немного понятнее я решил сделать небольшую визуализацию (такую нигде не найти)
+Философы пронумерованы от 0 до 4, так же, как и вилки. Дальнейшие детели реализации раскроются в отчёте.
 
 ![v6](https://github.com/kolpakovee/avs_idz4/blob/main/picture.png)
 
