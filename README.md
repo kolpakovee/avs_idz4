@@ -5,12 +5,12 @@
 
 Мой вариант 5 представлен ниже:
 
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/task.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/task.png)
 
 Чтобы было немного понятнее я решил сделать небольшую визуализацию (такую нигде не найти)
 Философы пронумерованы от 0 до 4, так же, как и вилки. Дальнейшие детели реализации раскроются в отчёте.
 
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/picture.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/picture.png)
 
 ---
 **Формат ввода:**
@@ -47,32 +47,32 @@ Philosopher(4) is thinking (7 seconds)
 ```
 ---
 ## 4 балла
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/4.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/4.png)
 - Условие задачи приведино
 - ОПИСАТЬ МОДЕЛЬ ПАРАЛЛЕЛЬНЫХ ВЫЧИСЛЕНИЙ
 - ОПИСАТЬ ВХОДНЫЕ ДАННЫЕ, ВАРИАТИВНЫЕ ДИАПАЗОНЫ
 - Реализовано консольное приложение с использованием мьютексов и семафоров
 - Ввод данных реализован из консоли/командной строки/файла
 ## 5 баллов
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/5.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/5.png)
 - Комментарии добавлены в программу. Можно увидеть в файле main.cpp
 - ОПИСАТЬ ПОВЕДЕНИЕ СУЩНОСТЕЙ (ОБЪЕКТОВ КАК ВЗАИМОДЕЙСТВУЮЩИХ СУБЪЕКТОВ)
 ## 6 баллов
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/6.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/6.png)
 - ОПИСАН ОБОЩЁННЫЙ АЛГОРИТМ
 - Ввод из командной строки реализован
 ## 7 баллов
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/7.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/7.png)
 - Реализован ввод из файла и вывод в файл
 - ПРИВЕСТИ ВХОДНЫЕ И ВЫХОДНЫЕ ДАННЫЕ С ТЕСТАМИ
 - Результаты работы программы выводятся на экран и записываются в файл
 - Расширен ввод данных из командной строки
 ## 8 баллов
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/8.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/8.png)
 - Добавлена генерация случайных чисел для времени "еды" и "размышлений" философов
 - ПРИВЕСТИ ВХОДНЫЕ И ВЫХОДНЫЕ ДАННЫЕ С ТЕСТАМИ
 - Расширен ввод данных из командной строки
 ## 9 баллов
-![v6](https://github.com/kolpakovee/avs_idz4/blob/main/9.png)
+![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/9.png)
 - ПРОВЕСТИ ИССЛЕДОВАНИЕ ПОВЕДЕНИЯ ПРОГРАММЫ, ЕСЛИ НЕ ИСПОЛЬЗОВАТЬ МЬЮТЕКСЫ + СЕМАФОРЫ, ТОЛЬКО МЬЮТЕКСЫ, ТОЛЬКО СЕМАФОРЫ)
 - ОПИСАТЬ НЕКОРРЕКТНЫЕ СИТУАЦИИ
