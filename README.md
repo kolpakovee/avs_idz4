@@ -150,7 +150,7 @@ fprintf(output_file, "Philosopher(%d) is eating with forks %d and %d (%d seconds
 fprintf(output_file, "Philosopher(%d) finished his meal and put down forks %d and %d\n", phNumber, phNumber, (phNumber + 1) % 5);
 fprintf(output_file, "Philosopher(%d) is thinking (%d seconds)\n", phNumber, t);
 ```
-- ПРИВЕСТИ ВХОДНЫЕ И ВЫХОДНЫЕ ДАННЫЕ С ТЕСТАМИ
+- Входные и выходные данные с тестами в папке tests
 - Результаты работы программы выводятся на экран и записываются в файл
 ```
 // Печатаем в консоль, что философ начинает есть
