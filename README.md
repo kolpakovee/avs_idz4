@@ -50,7 +50,7 @@ Philosopher(4) is thinking (7 seconds)
 ![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/4.png)
 - Условие задачи приведино
 - Моя модель параллельных вычислений - итеративный параллелизм, так как я использую для реализации 5 потоков, каждый из которых содержит циклы. Потоки программы, описываются итеративными функциями и работают совместно над решением одной задачи. 
-- Входные данные описывают кол-во итераций, которое выполнит каждый из потоков (философов). В одной итерации выполняется "приём пищи" и "процесс мышления".  Каждый из процессов идёт случайное время, поэтому каждый запуск - уникальное поведение. Впрочем, это можно увидеть по тестовым файлам далее в отчёте
+- Входные данные описывают кол-во итераций, которое выполнит каждый из потоков (философов). В одной итерации выполняется "приём пищи" и "процесс мышления". Каждый из процессов идёт случайное время, поэтому каждый запуск - уникальное поведение. Впрочем, это можно увидеть по тестовым файлам далее в отчёте
 - Реализовано консольное приложение с использованием мьютексов и семафоров. Семафоры нужны для того, чтобы каждый из философов не взял по одной вилке (например, левой) и они сидели и не кушали. Поэтому семафор создаётся со значением 4, таким образом одновременно кушать могут лишь два философа. Теперь о мьютексах: так как философы борятся за совместный ресурс (вилки), два философа не должны одновременно есть одно вилкой, поэтому как только философ берёт вилку - ресурс блокируется для других философов
 - Ввод данных реализован из консоли/командной строки/файла
 ## 5 баллов
@@ -118,11 +118,62 @@ pthread_mutex_unlock(&forks[(phNumber + 1) % 5]);
 ```
 - Таким образом сразу несколько философов не могут использовать одну вилку. Проблема совместного использования ресурсов решена.
 - Ввод из командной строки реализован
+```
+if (argc == 1) {
+    // ввод с консоли
+    scanf("%d", &COUNT);
+} else if (argc == 2) {
+    // ввод с командной строки
+    COUNT = atoi(argv[1]);
+} else if (argc == 3) {
+    // ввод / вывод из файла (в файл)
+    FILE *input_file = fopen(argv[1], "r");
+    fscanf(input_file, "%d", &COUNT);
+    output_file = fopen(argv[2], "w");
+} else {
+    // В случае, если некорректное число аргументов
+    printf("Invalid input!");
+    return 0;
+}
+```
 ## 7 баллов
 ![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/7.png)
 - Реализован ввод из файла и вывод в файл
+```
+// ввод
+FILE *input_file = fopen(argv[1], "r");
+fscanf(input_file, "%d", &COUNT);
+output_file = fopen(argv[2], "w");
+
+// вывод
+fprintf(output_file, "Philosopher(%d) is eating with forks %d and %d (%d seconds)\n", phNumber, phNumber, (phNumber + 1) % 5, t);
+fprintf(output_file, "Philosopher(%d) finished his meal and put down forks %d and %d\n", phNumber, phNumber, (phNumber + 1) % 5);
+fprintf(output_file, "Philosopher(%d) is thinking (%d seconds)\n", phNumber, t);
+```
 - ПРИВЕСТИ ВХОДНЫЕ И ВЫХОДНЫЕ ДАННЫЕ С ТЕСТАМИ
 - Результаты работы программы выводятся на экран и записываются в файл
+```
+// Печатаем в консоль, что философ начинает есть
+printf("Philosopher(%d) is eating with forks %d and %d (%d seconds)\n", phNumber, phNumber, (phNumber + 1) % 5, t);
+// Если пользователь вводил имя файла -> печатаем в файл тоже
+if (output_file != nullptr) {
+    fprintf(output_file, "Philosopher(%d) is eating with forks %d and %d (%d seconds)\n", phNumber, phNumber, (phNumber + 1) % 5, t);
+}
+// Имитируем процесс "поедания"
+sleep(t);
+
+// Печатаем в консоль, что философ положил вилки
+printf("Philosopher(%d) finished his meal and put down forks %d and %d\n", phNumber, phNumber, (phNumber + 1) % 5);
+// Если пользователь вводил имя файла -> печатаем в файл тоже
+if (output_file != nullptr) {
+    fprintf(output_file, "Philosopher(%d) finished his meal and put down forks %d and %d\n", phNumber, phNumber, (phNumber + 1) % 5);
+}
+printf("Philosopher(%d) is thinking (%d seconds)\n", phNumber, t);
+// Если пользователь вводил имя файла -> печатаем в файл тоже
+if (output_file != nullptr) {
+    fprintf(output_file, "Philosopher(%d) is thinking (%d seconds)\n", phNumber, t);
+}
+```
 - Расширен ввод данных из командной строки
 ## 8 баллов
 ![v6](https://github.com/kolpakovee/avs_idz4/blob/main/images/8.png)
